@@ -24,10 +24,10 @@ html, body {
 }
 
 body {
-    background: url('../imgs/b.jpg');
+    background: url('http://www.opsonnet.nya.je/assets/imgs/b.jpg');
     background-size: cover;
     background-position: center;
-    cursor: url('../imgs/e.png'), auto;
+    cursor: url('http://www.opsonnet.nya.je/assets/imgs/e.png'), auto;
     background-repeat: no-repeat;
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5); /* this adds a color overlay to the image */
     position: relative;
