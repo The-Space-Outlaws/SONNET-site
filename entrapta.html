@@ -2,6 +2,21 @@
   <head>
     <title>Entrapta's page</title>
     <link rel="stylesheet" href="assets/css/entrapta.css">
+    <style>
+        #bg-audio { display: none; }
+      
+        .audio-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background: pink;
+            color: hotpink;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
   </head>
   <body>
       <div class="top">
@@ -19,6 +34,28 @@
     <div class = "content">
   <p>Hello! I'm Entrapta(no actually my nickname is Abby) :3</p>
     <p>I usually like drawing random things, music, reading, and sometimes I'm chronically online XD. Also check out my fav blinkies <3</p>
+      <!-- Audio Element -->
+    <audio id="bg-audio" loop>
+        <source src="https://cdn.jsdelivr.net/gh/The-Space-Outlaws/SONNET-site@refs/heads/main/assets/extra/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Control Button -->
+    <button id="toggle-btn" class="audio-toggle"> Play Music</button>
+
+    <script>
+        const audio = document.getElementById('bg-audio');
+        const btn = document.getElementById('toggle-btn');
+
+        btn.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                btn.textContent = "Pause Music";
+            } else {
+                audio.pause();
+                btn.textContent = "Play Music I Like";
+            }
+        });
+    </script>
     </div>
     <div class = "bottom-element">
    <marquee direction="right" behavior="scroll" scrollamount="15">
